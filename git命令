@@ -1,0 +1,15 @@
+git init 初始化仓库
+git add .    提交到本地缓存
+git commit -m ‘描述’   提交到master仓库
+git remote add origin url  添加远程仓库地址
+git push origin master 推送到远程仓库
+
+git log 查看所有提交记录
+
+git tag 查看所有标签的别名
+git tag -a "0.0.1" -m “ooo”  添加tag标签
+git gush --tags 推送所有tag标签
+git gush origin 0.0.1 推送制定tag标签
+git tag -d 0.0.1 删除本地标签
+git gush origin :0.0.1 删除远程标签
+
