@@ -1,0 +1,20 @@
+pod 私用库
+
+
+1.在本地创建文件夹
+2.创建描述文件 ----- pod spec create private
+3.需改spec文件
+  spec.summary      = "=="
+  spec.description  = "==d==“
+spec.homepage 随便改一个地址
+spec.license      = "MIT"
+#清理git里面的路径
+  spec.source       = { :git => "", :tag => "#{spec.version}" }
+s.dependency 'AFNetworking', '~> 2.3’ //添加库依赖 的库
+s.dependency 'SDWebimage', '~> 2.3’ //并列写就好
+4.创建库文件夹(Classes，这个是根据spec的spec.source_files确定)
+5.在Classes里加入自己的框架代码
+6.在项目的Podfile文件中
+用path指定spec文件所在的目录，
+pod ‘库的名字’，：path=>’’ //在path指定的目录下面找spece文件
+7.在项目目录执行pod install就好了

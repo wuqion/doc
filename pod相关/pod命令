@@ -1,0 +1,23 @@
+pod 命令
+
+pod init 建立一个 Podfile 文件
+pod install 安装第三方库(按照podfile.lock文件下载，没有podfile.lock,按照最新下载)
+pod update 安装第三方库(按照podfile按照最新下载,更新podfile.lock)
+
+验证索引库
+pod spec lint --sources='https://git.coding.net/CocoaPods/Specs.git'
+推送索引库，sources指定依赖库的索引库
+pod repo push WQView WQView.podspec  --sources='https://git.coding.net/CocoaPods/Specs.git'
+
+
+
+pod install 流程
+
+1.下载远程的索引库.到本地（其中的描述信息，有远程第三方的真实地址）
+2.根据本地索引库，搜索索引文件（描述信息）
+3.根据索引文件下载库
+
+
+
+
+

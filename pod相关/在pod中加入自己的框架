@@ -1,0 +1,17 @@
+1.建立一个git远程仓库
+2.在本地创建文件夹
+3.初始化git   ------   git init
+4.添加远程仓库地址 ------   git remote add origin url
+5.创建描述文件 ----- pod spec create private
+6.需改spec文件
+7.创建库文件夹(Classes，这个是根据spec的spec.source_files确定)
+8.在Classes里加入自己的框架代码
+9.打上tag要与spec描述文件的版本号一致
+10.上传代码和tag
+11. 验证spec描述文件,验证远程仓库对应的版本的代码 ——— pod spec lint private.podspec
+只要spec描述文件，没报错就好，不用管xcodebuild报的错
+12.建立自己的pod 账号 pod trunk register wuqiongaia@163.com 'wuqiong' --verbose --description='描述'
+13.去邮箱里找到Confirm your registration.的 确认文件
+14.复制邮件中的地址，在浏览器中打开，显示   you can go back to your terminal now.就好了 
+15.上传podspec到pod----------  pod trunk push private.podspec 
+16.用pod seach 搜到不到，就删除本地pod 索引文件
